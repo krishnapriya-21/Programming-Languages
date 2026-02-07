@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form in HTML</title>
+    </head>
+    <body>
+        <h1> Form in HTML</h1>
+        <Form>
+            Name: <input type="text" name="UserName"><br><br>
+
+            <!-- Using FOR to add name for input-->
+            <label for="email">Email:</label> 
+            <input type="email" name="email"><br><br>
+
+            <label for="phone">Phone No:</label> 
+            <input type="number" name="phone">  <br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password"><br><br>
+
+            <!--Directly adding content without FOR for checkbox-->
+            <label>
+            <input type="checkbox" name="fruits" value="apple">
+            Apple
+           </label><br><br>
+           <label>
+            <input type="checkbox" name="fruits" value="banana">
+            Banana
+           </label><br><br>
+           <label>
+            <input type="checkbox" name="fruits" value="mango">
+            Mango
+           </label><br><br>
+
+           <label>
+            <input type="radio" name="gender" value="male">
+            Male
+           </label><br><br>
+
+           <label>
+            <input type="radio" name="gender" value="female">
+            Female
+           </label><br><br>
+
+            <label for="message" >Message:</label>
+            <textarea name="message"></textarea><br><br>
+
+            <button type="submit"> Submit </button>
+
+        </Form>
+    </body>
+</html>

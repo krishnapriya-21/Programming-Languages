@@ -1,0 +1,13 @@
+PYTHON PROGRAMMING LANGUAGE
+
+Introduction to Python 🐍
+Python is one of the most popular programming languages in the world today.
+It’s widely used in education because of its simplicity, readability, and versatility. 
+
+
+Key Features of Python
+- Easy to Learn & Read: Code looks clean and resembles plain English.
+- Interpreted Language: No need to compile; you can run code directly.
+- Cross-Platform: Works on Windows, Mac, Linux, and even mobile devices.
+- Versatile: Used in web development, data science, AI, automation, and more.
+- Large Community: Plenty of tutorials, libraries, and support available.
