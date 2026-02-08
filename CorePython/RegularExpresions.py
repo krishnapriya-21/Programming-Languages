@@ -37,8 +37,8 @@ else:
 
 
 # Password strength check
-pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*0-9)"
-password = input("Enter your python: ")
+pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$')"
+password = input("Enter your Pssword: ")
 match = bool(re.match(pattern, password))
 if match:
     print("Your password is strong")
