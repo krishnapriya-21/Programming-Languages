@@ -37,7 +37,7 @@ else:
 
 
 # Password strength check
-pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$')"
+pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])([A-Za-z\d@$!%*?&]{8,}$)"
 password = input("Enter your Pssword: ")
 match = bool(re.match(pattern, password))
 if match:
