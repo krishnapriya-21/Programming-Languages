@@ -8,6 +8,7 @@ public class DataTypes{
         long l= 45730947;
         char c='A';
         boolean flag=true;
+        String text ="This is a sentence";
 
         System.out.println("The byte value is:" +b);
         System.out.println("The short value is:" +s);
@@ -17,6 +18,7 @@ public class DataTypes{
         System.out.println("The long value is:" +l);
         System.out.println("The char value is:" +c);
         System.out.println("The boolean value is:" +flag);
+        System.out.println("The String value is :" + text);
 
     }
 }
