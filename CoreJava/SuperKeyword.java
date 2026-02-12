@@ -1,27 +1,19 @@
-//2. The super Keyword
-//Definition: Refers to the parent (superclass) of the current object.
-
-//Key Uses:
-
-//Access parent class variables/methods when they are hidden by child class.
-
-//Call parent class constructor from child class constructor.
 
 
-class Animal{
+class Animal1{
     String name = "Animal";
     
-    Animal(){
+    Animal1(){
         System.out.println("Animal Constructor called");
     }
 
-    void sound(){
+    void sound1(){
         System.out.println("Animal makes a sound");
     }
 
 }
 
-class Dog extends Animal{
+class Dog1 extends Animal1{
    
     String name = "Dog";
 
@@ -29,13 +21,13 @@ class Dog extends Animal{
 
     //Calling Animal constructor
 
-    Dog(){
+    Dog1(){
         super();  // calls the constructor of the parent class (Animal)
         count++; // Incrementing the count og dog instances
     }
 
-    void sound(){
-        super.sound();  // calls the method sound() of the parent class
+    void sound1(){
+        super.sound1();  // calls the method sound() of the parent class
         System.out.println("Dog barks");
     }
 
@@ -53,15 +45,15 @@ class Dog extends Animal{
 public class SuperKeyword {
     
     public static void main(String[] args){
-        Dog dog = new Dog();
-        dog.sound();
+        Dog1 dog = new Dog1();
+        dog.sound1();
         dog.displayNames();
 
 
         //Purpose of count (static variable):  
         //In the example, count is a static variable that tracks how many Dog objects have been created.
         //Every time you call new Dog(), the constructor increments count.
-        Dog dog2 = new Dog();
-        Dog.displayCount();
+        Dog1 dog2 = new Dog1();
+        Dog1.displayCount();
     }
 }

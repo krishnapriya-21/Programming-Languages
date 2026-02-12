@@ -1,12 +1,3 @@
-//Definition: Used for members (variables, methods, blocks, nested classes) that belong to the class rather than any specific object.
-
-//Key Points:
-
-//Shared across all objects of the class.
-
-//Can be accessed without creating an object.
-
-//Useful for constants, utility methods, and memory efficiency.
 
 public class StaticKeyword {
     

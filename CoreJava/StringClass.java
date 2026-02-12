@@ -1,23 +1,3 @@
-//1. What is a String?
-//A String in Java is an object that represents a sequence of characters.
-
-//Unlike primitive types (int, char, etc.), Strings are immutable objects—once created, their value cannot be changed.
-
-//Strings are widely used for text manipulation in Java programs.
-
-//Key Properties
-//Immutable: Any modification (like concatenation) creates a new String object.
-
-//Stored in String Pool: Java optimizes memory by reusing string literals.
-
-//Belongs to java.lang package: No need to import explicitly.
-
-//Mutable Alternatives
-//StringBuilder and StringBuffer are mutable versions.
-
-//Use them when frequent modifications are needed (e.g., loops, concatenations).
-
-
 
 public class StringClass {
 

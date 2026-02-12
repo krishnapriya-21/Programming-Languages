@@ -1,30 +1,4 @@
 
-//The Problem
-//Java has primitive types: int, char, double, boolean, etc.
-
-//These are not objects—they are simple values stored directly in memory.
-
-//But many Java features (like Collections such as ArrayList) only work with objects, not primitives.
-
-//Solution: Wrapper Classes turn primitives into objects.
-
-// A Wrapper Class is a class that "wraps" a primitive value inside an object.
-
-// Each primitive type has a corresponding wrapper class.
-
-//Autoboxing and Unboxing
-//Autoboxing: Java automatically converts a primitive → wrapper object.
-
-//Unboxing: Java automatically converts a wrapper object → primitive.
-
-// Collections: ArrayList<int> is not allowed, but ArrayList<Integer> works.
-
-// Utility Methods: Wrapper classes provide methods like parsing and converting.
-
-// Null Handling: Objects can be null, primitives cannot.
-
-// Type Conversion: Easy conversion between strings and numbers.
-
 import java.util.ArrayList;
 
 public class WrapperClass {
