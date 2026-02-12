@@ -20,11 +20,14 @@ public class StaticKeyword {
     }
 
     public static void main(String[] args){
-        //Accessing static variable directly
-        System.out.println("Accessing static variable directly:" + StaticKeyword.count);
+       
 
         //Accessing static function without object
         StaticKeyword.greet();
+
+         //Accessing static variable directly
+        System.out.println("Accessing static variable directly:" + StaticKeyword.count);
+        
     }
 
 }

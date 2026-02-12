@@ -49,7 +49,7 @@ public class StringClass {
         }
 
         //comparison of strings
-        string str2 = new String("Java Programming");
+        String str2 = new String("Java Programming");
 
         System.out.println("== comparison:" + (str == str2));
         System.out.println("equals () comparison:" + str.equals(str2));

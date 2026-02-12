@@ -1,7 +1,7 @@
 
 // Class with variables
 
-class Student{
+class Student1{
     String name;
     int age;
 }
@@ -10,7 +10,7 @@ class Student{
 public class DefaultConstructor {
     
     public static void main(String[] args){
-        Student student = new Student(); // Default constructor
+        Student1 student = new Student1(); // Default constructor
         System.out.println(student.name);
         System.out.println(student.age);
     }

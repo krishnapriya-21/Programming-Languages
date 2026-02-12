@@ -66,7 +66,7 @@ public class WrapperClass {
 
         String s1 = "true";
         boolean b = Boolean.parseBoolean(s1); // Converting String to boolean
-        System.println("Parsed boolean:" +b);
+        System.out.println("Parsed boolean:" +b);
 
 
     }
