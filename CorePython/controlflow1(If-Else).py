@@ -3,6 +3,7 @@ a= int(input("Enter vaue for A"))
 
 # checking if input equals to 10
 if(a==10):
+    
     print("A equals to 10")
 # checking if input is greater than 10
 elif(a>10):

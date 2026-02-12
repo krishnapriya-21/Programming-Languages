@@ -8,9 +8,9 @@ public class MODynamicPolymorphism {
 
         //Runtime polymorphism
         //The reference type is vehicle and actual object of particular vehicles
-        Vehicle mycar = new Car();
-        Vehicle myscooter = new Scooter();
-        Vehicle myelectriccar = new ElectricCar();
+        Vehicle mycar = new Car1();
+        Vehicle myscooter = new Scooter1();
+        Vehicle myelectriccar = new ElectricCar1();
         
         myvehicle.start();
         mycar.start();
@@ -28,21 +28,21 @@ class Vehicle{
 }
 
 // Class that extends base class
-class Car extends Vehicle{
+class Car1 extends Vehicle{
     @Override
     void start(){
         System.out.println("Car starts with key ignition");
     }
 }
 
-class Scooter extends Vehicle{
+class Scooter1 extends Vehicle{
     @Override
     void start(){
         System.out.println("Scooter starts with button");
     }
 }
 
-class ElectricCar extends Vehicle{
+class ElectricCar1 extends Vehicle{
     @Override
     void start(){
         System.out.println("Electric car starts silently with a button");
