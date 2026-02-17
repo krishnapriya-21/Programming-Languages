@@ -38,14 +38,31 @@
            </label><br><br>
 
            <label>
-            <input type="radio" name="gender" value="female">
+            <input type="radio" name="gender" value="female" >
             Female
            </label><br><br>
 
             <label for="message" >Message:</label>
-            <textarea name="message"></textarea><br><br>
+            <textarea name="message" rows="10" cols="80" ></textarea><br><br>
+
+            <select name="s_box">
+            <option value="Afganistan">Afganistan</option>
+            <option value="India" selected>India</option>
+            <option value="NewZealand">NewZealand</option>
+            </select>
+
+
+            <select name="s_box" size="4" multiple>
+            <option value="s_male" selected>Male</option>
+            <option value="s_female" selected>Female</option>
+            <option value="s_infant">Infant 1</option>
+            <option value="s_infant" selected>Infant 2</option>
+            <option value="s_infant">Infant 3</option>
+            <option value="s_infant">Infant 4</option>
+            </select>
 
             <button type="submit"> Submit </button>
+            <input type="button" onclick="alert('Hello')" name="b_alert" value="Say Hello"/><br>
 
         </Form>
     </body>
