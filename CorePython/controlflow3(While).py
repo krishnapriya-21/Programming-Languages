@@ -2,9 +2,9 @@
 
 input1 = int(input("How many times do you want me to loop and print ?"))
 
-#Count from 0
+#Count from 1
 count =1
-while count<input1:
+while count<=input1:
     print(count)
     count+=1
   
