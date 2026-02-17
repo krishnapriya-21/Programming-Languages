@@ -1,0 +1,205 @@
+jsp codings
+-------------
+java server pages
+-------------------
+combination of html and servlets
+
+jsp page is converted into servlet and servlet is interact with java compiler
+------------------------------------------------------------------------------------
+
+jsp examples
+------------
+jsp normal tags
+--------------
+<html>
+	<head>
+		<title>Scriplet tag example</title>
+	</head>
+	<body>
+		<%
+			out.println("Sum of 10 and 20 = ");
+			out.print(10 + 20);
+		%>
+	</body>
+</html>
+--------------------------------------------------------------
+web.xml
+--------
+<web-app>
+ 
+  <welcome-file-list>
+          <welcome-file>welcome.jsp</welcome-file>
+  </welcome-file-list>	
+ 
+</web-app>
+------------------------------------------------------------------------
+jsp declaration tags
+--------------------
+html>
+	<head>
+		<title>Declaration tag example</title>
+	</head>
+	<body>
+		<%!
+			int sum(int a, int b){
+			return a + b;
+		}
+		%>
+ 
+		<%
+			out.println("Sum of 10 and 20 = " + sum(10, 20));
+		%>
+	</body>
+</html>
+-----------------------------------------------------------------------------------------
+jsp expression tags with examples
+---------------------------------
+html>
+	<head>
+		<title>Expression tag example</title>
+	</head>
+	<body>
+		Sum of 10 and 20 = <%= 10 + 20 %>
+	</body>
+</html>
+--------------------------------------------------------------------------------------------
+jsp comment tag with examples
+-----------------------------
+html>
+	<head>
+		<title>Comment tag example</title>
+	</head>
+	<body>
+		This is Comment tag example. 
+                Next line is commented so will not be visible.
+		<!-- Hello World -->
+	</body>
+</html>
+---------------------------------------------------------------------------------------------
+jsp directives
+--------------
+jsp page directives
+-------------------
+Page directive is used to provide the instructions to the web container that are specific to the current JSP page. It defines the page specific attributes like scripting language, error page etc.
+--------------------
+jsp import directive
+-------------------
+<%@ page import="java.util.Date" %>  
+ 
+<html>
+	<head>
+		<title>import page directive example</title>
+	</head>
+	<body> 
+		Current date: <%= new Date() %> 
+	</body>
+</html>
+-----------------------------------------------------------------------------------------
+session directive
+------------------
+<%@ page session="true" %> 
+ 
+<html>
+	<head>
+		<title>session page directive example</title>
+	</head>
+	<body> 
+		<h3>Hello this is a session page directive example.</h3> 
+		<%
+			out.print("Session id:" + session.getId());
+		%>
+	</body>
+</html>
+-----------------------------------------------------------------------------------------------
+buffer directive
+-----------------
+<%@ page buffer="32kb" %>  
+ 
+<html>
+	<head>
+		<title>buffer page directive example</title>
+	</head>
+	<body> 
+		<h3>Hello this is a buffer page directive example.</h3>
+	</body>
+</html>
+----------------------------------------------------------------------------------------
+auto flush 
+------------
+<%@ page autoFlush="true" %> 
+ 
+<html>
+	<head>
+		<title>autoFlush page directive example</title>
+	</head>
+	<body> 
+		<h3>Hello this is a autoFlush page directive example.</h3>
+	</body>
+</html>
+-------------------------------------------------------------------------------------
+content types
+-------------
+<%@ page  contentType="application/msword" %>  
+ 
+<html>
+	<head>
+		<title>contentType page directive example</title>
+	</head>
+	<body>
+	  <h3>Hello this is a contentType page directive example.</h3>
+	</body>
+</html>
+-----------------------------------------------------------------------------------------
+Iserrorpage
+-----------
+main.jsp
+---------
+<%@ page errorPage="errorPage.jsp" %>  
+ 
+<html>
+	<head>
+	  <title>isErrorPage and errorPage page directive example</title>
+	</head>
+	<body>
+		<%= 0/0 %>
+	</body>
+</html>
+--------------------------------------------
+errorpage.jsp
+--------------
+<%@ page isErrorPage="true" %>  
+ 
+<html>
+	<head>
+	  <title>isErrorPage and errorPage page directive example</title>
+	</head>
+	<body>
+               	<h3>Hello this is an isErrorPage and 
+                    errorPage page directive example.</h3>
+		<br/>
+		<h3>Some exception occurred.</h3>
+		Exception: <%=exception %>
+	</body>
+</html>
+--------------------------------------------------------------------------
+Isthreadsafe
+------------
+This attribute is used to specify whether this page supports multithreading or not. It can have true or false value
+-------------------------------------------------------
+
+<%@ page isThreadSafe="true" %>  
+ 
+<html>
+	<head>
+		<title>isThreadSafe page directive example</title>
+	</head>
+	<body>
+	  <h3>Hello this is an isThreadSafe page directive example.</h3>
+	</body>
+</html>
+------------------------------------------------------------------------
+
+
+
+
+

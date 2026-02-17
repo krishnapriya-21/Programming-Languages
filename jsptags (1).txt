@@ -1,0 +1,35 @@
+jsp tags 
+-----------
+Action tags
+-----------
+syntax
+-------
+<jsp:action_name attribute = "attribute_value" />
+--------------------------------------------------------
+ the list of JSP Actions:
+---------------------------
+
+jsp:forward: is used for forwarding the request and response to other resources.
+
+jsp:include: is used for including another resource.
+
+jsp:body: is used for defining dynamically-defined body of XML element.
+
+jsp:useBean: is used for creating or locating bean objects.
+
+jsp:setProperty: is used for setting the value of property in the bean object.
+
+jsp:getProperty: is used for printing the value of the property of the bean.
+
+jsp:element: is used for defining XML elements dynamically.
+
+jsp:plugin: is used for embedding other components (applets).
+
+jsp:param: is used for setting the parameter for (forward or include) value.
+
+jsp:text: is used for writing template text in JSP pages and documents.
+
+jsp:fallback: is used for printing the message if plugins are working.
+
+jsp:attribute: is used for defining attributes of dynamically-defined XML element.
+-----------------------------------------------------------------------------------
