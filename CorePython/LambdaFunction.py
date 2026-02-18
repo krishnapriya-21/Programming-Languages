@@ -38,7 +38,7 @@ even = list(filter(lambda x: x%2==0,list2))
 
 print("The even numbers from the list are: ",even)
 
-#Finding the maximum number with resuce function in lamda
+#Finding the maximum number with reduce function in lamda
 
 numbers = []
 
