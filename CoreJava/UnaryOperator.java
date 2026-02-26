@@ -27,6 +27,8 @@ public class UnaryOperator {
         //Postfix Decreament
         System.out.println("a-- ->" + a--);
 
+        System.out.println("a-- ->" + a);
+
         boolean flag = false;
 
         //Not operator flips a boolean value

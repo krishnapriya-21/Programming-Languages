@@ -36,9 +36,9 @@ print("The character a is repeated for: ", fruit.count("a"), "times")
 #7. modifying case
 
 topic = "pYThon pRoGramming"
-print("In upper case:" , text.upper() )
-print("In lower case: ", text.lower())
-print("Printing as title:" , text.title())
+print("In upper case:" , topic.upper() )
+print("In lower case: ", topic.lower())
+print("Printing as title:" , topic.title())
 
 #8. Removing extra spaces
 greeting = " Hello world  "

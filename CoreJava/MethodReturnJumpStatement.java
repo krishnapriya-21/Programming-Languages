@@ -9,11 +9,11 @@ public class MethodReturnJumpStatement {
         int number = getInput.nextInt();
         getInput.close();
 
-        System.out.println("The cube of number " + number +"is : " + findSquare(number));
+        System.out.println("The cube of number " + number +"is : " + findCube(number));
 
     }
 
-    public static int findSquare( int num){
+    public static int findCube( int num){
         return num*num*num;
     }
 

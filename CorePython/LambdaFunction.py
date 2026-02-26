@@ -7,7 +7,7 @@ square= lambda x:x*x
 
 print(square(number))
 
-
+#----------------------------------------------------------------------------------
 #Getting user input
 num1 = int(input("enter first number:"))
 num2 = int(input("Enter the second number:"))
@@ -17,7 +17,7 @@ num2 = int(input("Enter the second number:"))
 sum= lambda a,b: a+b
 print(sum(num1,num2))
 
-
+#-------------------------------------------------------------------------------------
 #List with numbers 
 
 list1 = [1,2,3,4,5]
@@ -29,6 +29,7 @@ cube = map(lambda x: x**3, list1)
 #map returns an object, convert it into list
 print("The cube of numbers are: " , list(cube))
 
+#---------------------------------------------------------------------------------------
 
 #printing even numbers with filter function
 
@@ -37,6 +38,8 @@ list2 = [15,20,30,35,40,45,50]
 even = list(filter(lambda x: x%2==0,list2))
 
 print("The even numbers from the list are: ",even)
+
+#----------------------------------------------------------------------------------------
 
 #Finding the maximum number with reduce function in lamda
 

@@ -3,8 +3,10 @@ def greet(name,age):
  print(f"Hello,{name} , your age is : {age}")
 
 name1= input("what is your name?")
-age1 = input("What is your age?")
+age1 = int(input("What is your age?"))
 greet(name1,age1)
+
+#------------------------------------------------------
 
 #keyword arguments are matched by name not order
 def power(a,b):
@@ -15,11 +17,15 @@ num2 = int(input("Enter b:"))
 
 power(a=num1,b=num2)
 
+#-------------------------------------------------------
+
 #Default arguments
 def wish(name,wish="Happy Birthday!"):
  print(f"Hello {name}, {wish}")
 
 wish("Apollo","Happy Anniversary") 
+
+#-------------------------------------------------------
 
 #Variable length arguments
 
@@ -28,6 +34,7 @@ def printing(*args):
  print(args)
 
 printing(1,2,3,4,5) 
+#---------------------------------------------------------
 
 # **args collects extra keyword arguments as dictionaries ( key and value pair)
 
