@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ClassesAndObjects",
+            "request": "launch",
+            "mainClass": "ClassesAndObjects",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "MethodReturnJumpStatement",
+            "request": "launch",
+            "mainClass": "MethodReturnJumpStatement",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "DowhileLoop",
             "request": "launch",
             "mainClass": "DowhileLoop",

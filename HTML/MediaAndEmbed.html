@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media and Embed Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    video, iframe {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Media and Embed Demo</h1>
+
+  <!-- Video Section -->
+  <section>
+    <h2>Watch This Video</h2>
+    <video controls width="400">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p>This video is embedded using the <code>&lt;video&gt;</code> tag with controls enabled.</p>
+  </section>
+
+  <!-- Iframe Section -->
+  <section>
+    <h2>Embedded Wikipedia Page</h2>
+    <iframe src="https://www.wikipedia.org" height="400" width="100%"></iframe>
+    <p>
+      The above content is displayed using the <code>&lt;iframe&gt;</code> tag, 
+      which allows embedding another webpage inside your site.
+    </p>
+  </section>
+
+</body>
+</html>

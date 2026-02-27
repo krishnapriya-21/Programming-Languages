@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A11y & ARIA Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    nav {
+      background: #f4f4f4;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    #menu-list {
+      display: none;
+      margin-top: 10px;
+    }
+    #menu-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    #menu-list li {
+      margin: 5px 0;
+    }
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation with ARIA role and label -->
+  <nav role="navigation" aria-label="Main Menu">
+    <!-- Button with ARIA attributes -->
+    <button aria-expanded="false" aria-controls="menu-list" id="menu-toggle">
+      Toggle Menu
+    </button>
+
+    <!-- Menu list controlled by the button -->
+    <div id="menu-list">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Accessibility & ARIA Example</h1>
+    <p>
+      This demo shows how ARIA attributes help screen readers understand
+      interactive elements. The button above toggles the visibility of the menu.
+    </p>
+  </main>
+
+  <script>
+    // Simple JavaScript to toggle menu visibility and update aria-expanded
+    const toggleButton = document.getElementById('menu-toggle');
+    const menuList = document.getElementById('menu-list');
+
+    toggleButton.addEventListener('click', () => {
+      const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+      toggleButton.setAttribute('aria-expanded', !expanded);
+      menuList.style.display = expanded ? 'none' : 'block';
+    });
+  </script>
+
+</body>
+</html>

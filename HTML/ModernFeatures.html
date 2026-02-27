@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern HTML Features Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    svg {
+      display: block;
+      margin: 20px auto;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Modern HTML Features</h1>
+
+  <!-- SVG Example -->
+  <h2>SVG Circle</h2>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
+  </svg>
+  <p>This is a scalable vector graphic (SVG). It stays sharp even when zoomed.</p>
+
+  <!-- Template Example -->
+  <h2>Template Demo</h2>
+  <template id="my-paragraph">
+    <p>This content is hidden until JavaScript shows it.</p>
+  </template>
+  <button id="show-content">Show Template Content</button>
+  <div id="output"></div>
+
+  <!-- Details & Summary Example -->
+  <h2>Details & Summary</h2>
+  <details>
+    <summary>Click to read more</summary>
+    <p>Hidden details revealed! This is a native HTML accordion.</p>
+  </details>
+
+  <!-- Entities Example -->
+  <h2>HTML Entities</h2>
+  <p>&copy; 2026 My Website &nbsp; | &nbsp; All rights reserved.</p>
+
+  <script>
+    // JavaScript to use the <template> content
+    const button = document.getElementById('show-content');
+    const output = document.getElementById('output');
+    const template = document.getElementById('my-paragraph');
+
+    button.addEventListener('click', () => {
+      // Clone the template content and append it
+      const clone = template.content.cloneNode(true);
+      output.appendChild(clone);
+    });
+  </script>
+
+</body>
+</html>
