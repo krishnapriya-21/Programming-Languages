@@ -1,39 +1,37 @@
-import mysql.connector
+import sqlite3
 
-# Step 1: Connect to MySQL server (without selecting a database yet)
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd=""   # Add your password here if required
+# ----------------------------------------
+# Step 1: Connect to SQLite database
+# ----------------------------------------
+# This will create 'mydatabase.db' file if it doesn’t exist
+con = sqlite3.connect("mydatabase.db")
+cur = con.cursor()
+
+# ----------------------------------------
+# Step 2: Create table if not exists
+# ----------------------------------------
+cur.execute("""
+CREATE TABLE IF NOT EXISTS customers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    address TEXT
 )
+""")
+con.commit()
 
-mycursor = mydb.cursor()
-
-# Step 2: Create database (only if it doesn’t already exist)
-mycursor.execute("CREATE DATABASE IF NOT EXISTS mydatabase")
-
-# Step 3: Reconnect, this time selecting the database
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd="",   # Add your password here if required
-  database="mydatabase"
-)
-
-mycursor = mydb.cursor()
-
-# Step 4: Create table (only if it doesn’t already exist)
-mycursor.execute("CREATE TABLE IF NOT EXISTS customers (name VARCHAR(255), address VARCHAR(255))")
-
-# Step 5: Insert a single row
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+# ----------------------------------------
+# Step 3: Insert a single row
+# ----------------------------------------
+sql = "INSERT INTO customers (name, address) VALUES (?, ?)"
 val = ("John", "Highway 21")
-mycursor.execute(sql, val)
-mydb.commit()
-print(mycursor.rowcount, "record inserted.")
+cur.execute(sql, val)
+con.commit()
+print(cur.rowcount, "record inserted.")
 
-# Step 6: Insert multiple rows
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+# ----------------------------------------
+# Step 4: Insert multiple rows
+# ----------------------------------------
+sql = "INSERT INTO customers (name, address) VALUES (?, ?)"
 val = [
   ('Peter', 'Lowstreet 4'),
   ('Amy', 'Apple st 652'),
@@ -49,26 +47,32 @@ val = [
   ('Chuck', 'Main Road 989'),
   ('Viola', 'Sideway 1633')
 ]
-mycursor.executemany(sql, val)
-mydb.commit()
-print(mycursor.rowcount, "records inserted.")
+cur.executemany(sql, val)
+con.commit()
+print(cur.rowcount, "records inserted.")
 
-# Step 7: Select all rows
-mycursor.execute("SELECT * FROM customers")
-myresult = mycursor.fetchall()
+# ----------------------------------------
+# Step 5: Select all rows
+# ----------------------------------------
+cur.execute("SELECT * FROM customers")
+myresult = cur.fetchall()
 print("\nAll rows:")
 for x in myresult:
-  print(x)
+    print(x)
 
-# Step 8: Select specific columns
-mycursor.execute("SELECT name, address FROM customers")
-myresult = mycursor.fetchall()
+# ----------------------------------------
+# Step 6: Select specific columns
+# ----------------------------------------
+cur.execute("SELECT name, address FROM customers")
+myresult = cur.fetchall()
 print("\nNames and addresses:")
 for x in myresult:
-  print(x)
+    print(x)
 
-# Step 9: Fetch one row
-mycursor.execute("SELECT * FROM customers")
-myresult = mycursor.fetchone()
+# ----------------------------------------
+# Step 7: Fetch one row
+# ----------------------------------------
+cur.execute("SELECT * FROM customers")
+myresult = cur.fetchone()
 print("\nFirst row only:")
 print(myresult)
