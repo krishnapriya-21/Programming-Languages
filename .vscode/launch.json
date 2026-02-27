@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DowhileLoop",
+            "request": "launch",
+            "mainClass": "DowhileLoop",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "whileLoop",
+            "request": "launch",
+            "mainClass": "whileLoop",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "forloopTriangle",
+            "request": "launch",
+            "mainClass": "forloopTriangle",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "ConsOverLoading",
+            "request": "launch",
+            "mainClass": "ConsOverLoading",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "ParameterizedConstructor",
+            "request": "launch",
+            "mainClass": "ParameterizedConstructor",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "NoArgConstructorDemo",
+            "request": "launch",
+            "mainClass": "NoArgConstructorDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "DefaultConstructor",
+            "request": "launch",
+            "mainClass": "DefaultConstructor",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "ArrayOperations",
             "request": "launch",
             "mainClass": "ArrayOperations",

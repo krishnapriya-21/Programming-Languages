@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Title</title>
+  <style>
+    /* Basic styling so sections are visually distinct */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
+    header, nav, section, footer {
+      padding: 20px;
+    }
+    header {
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      background: #555;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      min-height: 400px; /* ensures space to scroll */
+      border-bottom: 1px solid #ccc;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="home">
+    <h1>My Awesome Blog</h1>
+    <p>A place to share thoughts and ideas</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Welcome to my blog! I’m passionate about web development and sharing
+        knowledge with others. This section tells you a little about me.
+      </p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>Latest Blog Posts</h2>
+
+      <article>
+        <h3>Understanding HTML Structure</h3>
+        <p>
+          HTML provides semantic tags that help organize content meaningfully.
+          For example, <code>&lt;header&gt;</code> introduces the page,
+          while <code>&lt;footer&gt;</code> wraps up with closing information.
+        </p>
+      </article>
+
+      <article>
+        <h3>Why Semantic Tags Matter</h3>
+        <p>
+          Semantic tags improve SEO and accessibility. Screen readers can
+          interpret them better, and search engines understand your content
+          hierarchy more clearly.
+        </p>
+      </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        Feel free to reach out via email at
+        <a href="mailto:example@email.com">example@email.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 My Awesome Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
