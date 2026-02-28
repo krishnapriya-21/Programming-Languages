@@ -29,7 +29,7 @@ public class SwitchControlStatement {
                 System.out.println("It is Sunday");
             break;
             default:
-                System.out.println("Enter number between 1 - 7");
+                System.out.println("Invalid Number");
 
         }
       

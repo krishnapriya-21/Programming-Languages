@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "IFElseLadderControlStatement",
+            "request": "launch",
+            "mainClass": "IFElseLadderControlStatement",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "JumpStatements",
+            "request": "launch",
+            "mainClass": "JumpStatements",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "FORLoopStatement",
+            "request": "launch",
+            "mainClass": "FORLoopStatement",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "UnaryOperator",
+            "request": "launch",
+            "mainClass": "UnaryOperator",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "AssignmentOperator",
+            "request": "launch",
+            "mainClass": "AssignmentOperator",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "Greetings",
+            "request": "launch",
+            "mainClass": "Greetings",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "ClassesAndObjects",
             "request": "launch",
             "mainClass": "ClassesAndObjects",
