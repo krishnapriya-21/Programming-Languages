@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws & Claws Pet Shelter</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>🐾 Paws & Claws Pet Shelter</h1>
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="#pets">Available Pets</a>
+    <a href="./donate.html">Donate</a>
+  </nav>
+
+  <main>
+    <!-- Pet List -->
+    <section id="pets">
+      <h2>Available Pets</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Breed</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Buddy</td>
+          <td>Labrador</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Mittens</td>
+          <td>Tabby Cat</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Charlie</td>
+          <td>Beagle</td>
+          <td>4</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Video -->
+    <section>
+      <h2>A Day in the Life</h2>
+    <!-- Embed YouTube video -->
+        <iframe width="1800" height="315" src="https://www.youtube.com/embed/cAlHvtuniFY?si=ongJGVm28B205KgL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <button id="toggleVideo">Play/Pause Video</button>
+    </section>
+
+    <!-- Adoption Form -->
+    <section>
+      <h2>Adoption Form</h2>
+      <form id="adoptionForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="pet">Choose a pet:</label>
+        <select id="pet" required>
+          <option value="">--Select a Pet--</option>
+          <option value="Buddy">Buddy</option>
+          <option value="Mittens">Mittens</option>
+          <option value="Charlie">Charlie</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="confirmationMessage" class="success"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Paws & Claws Shelter</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

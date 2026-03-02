@@ -25,10 +25,12 @@ public class JumpStatements{
             if(i==num2){
                 System.out.println("Skipping the loop at number: " + i);
                 continue;
+                
             }
             else{
                 System.out.println(i);
             }
+            System.out.println();
         }
 
         getInput.close();
