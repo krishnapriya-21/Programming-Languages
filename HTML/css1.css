@@ -5,3 +5,11 @@ h3.h3_blue{
 h3.h3_red{
 color: red;
 }
+
+
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  /* Actual width = 300px */
+}
