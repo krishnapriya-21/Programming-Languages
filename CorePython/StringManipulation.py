@@ -11,7 +11,7 @@ print("The character at -1th index is : ",programmingLanguage[-1])
 #Accessing parts of string using [start:end:step]
 
 text = "Programming"
-print("The characters from 2nd index to 5th index are: ",text[2:5])
+print("The characters from 2nd index to 5th index are: ",text[2:6])
 print("The characters from 3rd index are: ",text[3:])
 print("The characters from 0th index stepping back by 1 are: ",text[::-1])
 

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DrawShapes",
+            "request": "launch",
+            "mainClass": "DrawShapes",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "MethodOverLoadingStaticPolymorphism",
             "request": "launch",
             "mainClass": "MethodOverLoadingStaticPolymorphism",
