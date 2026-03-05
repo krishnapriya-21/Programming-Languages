@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TernaryOperator",
+            "request": "launch",
+            "mainClass": "TernaryOperator",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "FrameAdapterDemo",
+            "request": "launch",
+            "mainClass": "FrameAdapterDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "MyFrame",
+            "request": "launch",
+            "mainClass": "MyFrame",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "DrawShapesSwing",
+            "request": "launch",
+            "mainClass": "DrawShapesSwing",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "DrawPolygonSwing",
+            "request": "launch",
+            "mainClass": "DrawPolygonSwing",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "FontDemoSwing",
+            "request": "launch",
+            "mainClass": "FontDemoSwing",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "DrawShapes",
             "request": "launch",
             "mainClass": "DrawShapes",
