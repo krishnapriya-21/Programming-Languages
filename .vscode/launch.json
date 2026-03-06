@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EncapsulationPwd",
+            "request": "launch",
+            "mainClass": "EncapsulationPwd",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "TernaryOperator",
             "request": "launch",
             "mainClass": "TernaryOperator",
