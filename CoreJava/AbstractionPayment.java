@@ -44,8 +44,9 @@ public class AbstractionPayment {
         // Declaring the variable with refernce to abstract class
         Payment p;
 
+       
 
-        if(payment.equalsIgnoreCase("credit")){
+    if(payment.equalsIgnoreCase("credit")){
 
             // Assigning the variable to be an instance of child class credit card
             p = new CreditCard();
@@ -66,6 +67,7 @@ public class AbstractionPayment {
             // calling concreate method
             p.paymentComplete();
         }
+        
 
         getInput.close();
 

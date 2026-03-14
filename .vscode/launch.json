@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InterfaceLibMgmt",
+            "request": "launch",
+            "mainClass": "InterfaceLibMgmt",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "AbstractionPayment",
+            "request": "launch",
+            "mainClass": "AbstractionPayment",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "Inheritance",
+            "request": "launch",
+            "mainClass": "Inheritance",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "LogicalOperator",
+            "request": "launch",
+            "mainClass": "LogicalOperator",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "ThisEmployee",
+            "request": "launch",
+            "mainClass": "ThisEmployee",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "EncapsulationPwd",
             "request": "launch",
             "mainClass": "EncapsulationPwd",
