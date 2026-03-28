@@ -20,6 +20,10 @@ public class StringClass {
         System.out.println("Index of 'Programming':" + str.indexOf("Programming"));
         System.out.println("Does string contain java? " + str.contains("Java"));
 
+        String string = "A,B,C";
+        String[] str1 = string.split(",");
+        System.out.println(Arrays.toString(str1));
+
 
         //splitting string
         String[] words = str.trim().split(" ");

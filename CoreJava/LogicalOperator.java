@@ -17,6 +17,7 @@ public class LogicalOperator {
             System.out.println("a<b || b>0 condition is Executed");
             System.out.println("Either A is lesser than B OR B is greater than 0 OR Both are True");
         }
+        
         if (!(a==b)){
             System.out.println("!(a==b) condition is executed");
             System.out.println("A and B are NOT Equal");

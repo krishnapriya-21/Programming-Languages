@@ -1,5 +1,6 @@
 h3.h3_blue{
     color: blue;
+    font-family: "Bitcount Grid Double Ink";
 }
 
 h3.h3_red{
@@ -12,4 +13,13 @@ color: red;
   padding: 20px;
   border: 2px solid black;
   /* Actual width = 300px */
+
+}
+
+.flexbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringClass",
+            "request": "launch",
+            "mainClass": "StringClass",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "InterfaceLibMgmt",
             "request": "launch",
             "mainClass": "InterfaceLibMgmt",

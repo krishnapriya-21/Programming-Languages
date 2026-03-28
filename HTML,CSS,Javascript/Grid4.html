@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Alignment Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      grid-template-rows: repeat(2, 150px);
+      gap: 10px;
+
+      /* Align ALL items */
+      justify-items: center;   /* horizontal in cell */
+      align-items: center;     /* vertical in cell */
+
+      /* Align the whole grid track when it doesn't fill container */
+      justify-content: center; /* horizontal alignment of grid tracks */
+      align-content: center;   /* vertical alignment of grid tracks */
+
+      height: 80vh; /* so you can see align-content effect */
+      border: 2px dashed #999;
+    }
+
+    .grid div {
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* Override for single item */
+    .featured {
+      justify-self: end;   /* override horizontal alignment */
+      align-self: end;     /* override vertical alignment */
+      background: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Grid Alignment Example</h2>
+  <div class="grid">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div class="featured">Featured</div>
+    <div>Box 4</div>
+    <div>Box 5</div>
+    <div>Box 6</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Spanning & Areas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Basic grid with 4 equal columns */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .grid > div {
+      background: #e0e0e0;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    /* Span across columns */
+    .header  { grid-column: 1 / -1; }          /* span all columns */
+    .sidebar { grid-column: 1 / 2; }           /* column 1 only */
+    .main    { grid-column: 2 / -1; }          /* columns 2–end */
+    .wide    { grid-column: span 2; }          /* span 2 columns */
+
+    /* Span rows */
+    .tall    { grid-row: span 2; }             /* span 2 rows */
+    .feature { grid-column: 1/3; grid-row: 1/3; } /* 2×2 block */
+
+    /* Named grid areas — most readable approach */
+    .layout {
+      display: grid;
+      grid-template-areas:
+        'header  header  header'
+        'sidebar main    main  '
+        'footer  footer  footer';
+      grid-template-columns: 250px 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header  { grid-area: header; background: #4CAF50; color: white; padding: 1rem; }
+    aside   { grid-area: sidebar; background: #f0f0f0; padding: 1rem; }
+    main    { grid-area: main; background: #ddd; padding: 1rem; }
+    footer  { grid-area: footer; background: #333; color: white; padding: 1rem; }
+  </style>
+</head>
+<body>
+
+  <h2>Grid with Spanning</h2>
+  <div class="grid">
+    <div class="header">Header (spans all columns)</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content</div>
+    <div class="wide">Wide Block (spans 2 columns)</div>
+    <div class="tall">Tall Block (spans 2 rows)</div>
+    <div>Box A</div>
+    <div>Box B</div>
+    <div class="feature">Feature (2×2 block)</div>
+    <div>Box C</div>
+    <div>Box D</div>
+  </div>
+
+  <h2>Layout with Named Areas</h2>
+  <div class="layout">
+    <header>Header Area</header>
+    <aside>Sidebar Area</aside>
+    <main>Main Area</main>
+    <footer>Footer Area</footer>
+  </div>
+
+</body>
+</html>

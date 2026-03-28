@@ -1,0 +1,11 @@
+- ActionListener – Handles button clicks, menu selections, etc.
+- ItemListener – Handles changes in checkboxes, radio buttons, combo boxes.
+- ChangeListener – Used with sliders, spinners, tabbed panes.
+- MouseListener / MouseMotionListener / MouseWheelListener – Handle mouse clicks, movement, and wheel scrolling.
+- KeyListener – Captures keyboard input.
+- FocusListener – Detects when a component gains or loses focus.
+- WindowListener / WindowFocusListener / WindowStateListener – Handle window events (open, close, minimize, etc.).
+- ComponentListener / ContainerListener – Track changes in components or containers.
+- ListSelectionListener / TreeSelectionListener – Used with JList and JTree for selection changes.
+- DocumentListener – Monitors changes in text components (like JTextField, JTextArea).
+- TableModelListener / TreeModelListener – For JTable and JTree model updates.
