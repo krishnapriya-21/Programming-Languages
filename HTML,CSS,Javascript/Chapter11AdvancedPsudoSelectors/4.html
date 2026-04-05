@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern CSS Selectors Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+    }
+
+    /* :has() — parent selector (modern CSS!) */
+    .card {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    .card:has(img) { padding: 0; }           /* card WITH an image */
+
+    form {
+      margin: 20px 0;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    form:has(:invalid) { border: red 2px solid; } /* form with invalid input */
+
+    /* :is() — match any of these */
+    :is(h1, h2, h3) { font-weight: 800; }
+    :is(.card, .panel, .modal) > p { margin: 0; }
+
+    /* :where() — like :is() but zero specificity */
+    :where(h1, h2, h3, h4) { line-height: 1.2; }
+
+    /* Focus visible — keyboard focus only */
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background: #264DE4;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .btn:focus-visible {
+      outline: 3px solid #264DE4;
+      outline-offset: 2px;
+    }
+    .btn:focus:not(:focus-visible) {
+      outline: none;   /* hide ugly outline on mouse click */
+    }
+
+    /* :empty — elements with no content */
+    .error {
+      background: #fee2e2;
+      color: #b91c1c;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+    .error:empty { display: none; }
+
+    /* :target — element matching URL hash */
+    :target { background: #fef3c7; }
+  </style>
+</head>
+<body>
+  <h1>Modern CSS Selectors Examples</h1>
+
+  <!-- Card with image -->
+  <div class="card">
+    <img src="https://picsum.photos/300/150" alt="Demo Image">
+    <p>This card contains an image.</p>
+  </div>
+
+  <!-- Card without image -->
+  <div class="card">
+    <p>This card has no image.</p>
+  </div>
+
+  <!-- Form with invalid input -->
+  <form>
+    <label>Email: <input type="email" required></label>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+
+  <!-- Empty error message -->
+  <div class="error"></div>
+
+  <!-- Target example -->
+  <h2 id="section1">Section 1</h2>
+  <p><a href="#section2">Go to Section 2</a></p>
+
+  <h2 id="section2">Section 2</h2>
+  <p>This section will be highlighted when targeted via URL hash.</p>
+</body>
+</html>

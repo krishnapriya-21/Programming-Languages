@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Clip-Path Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .shape {
+      width: 150px;
+      height: 150px;
+      background: #264DE4;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Clip element to a shape */
+    /* Circle */
+    .avatar { clip-path: circle(50%); background: #E44D26; }
+
+    /* Polygon */
+    .arrow   { clip-path: polygon(0 0, 100% 50%, 0 100%); background: #38a169; }
+    .diagonal { clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); background: #805ad5; }
+
+    /* Inset (rectangle with optional rounded corners) */
+    .inset   { clip-path: inset(10px 20px round 8px); background: #d69e2e; }
+
+    /* Animate clip-path on hover */
+    .btn-clip {
+  clip-path: inset(0 0 0 0); /* fully visible */
+}
+.btn-clip:hover {
+  clip-path: inset(0 0 0 0 round 12px); /* or add some animation */
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="shape avatar">Circle</div>
+  <div class="shape arrow">Arrow</div>
+  <div class="shape diagonal">Diagonal</div>
+  <div class="shape inset">Inset</div>
+  <div class="btn-clip">Hover Me</div>
+</body>
+</html>

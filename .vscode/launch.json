@@ -6,6 +6,97 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SwingPopup",
+            "request": "launch",
+            "mainClass": "SwingPopup",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "SwingMenu",
+            "request": "launch",
+            "mainClass": "SwingMenu",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "SliderDemo",
+            "request": "launch",
+            "mainClass": "SliderDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "ListDemo",
+            "request": "launch",
+            "mainClass": "ListDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "ComboDemo",
+            "request": "launch",
+            "mainClass": "ComboDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "CheckRadio",
+            "request": "launch",
+            "mainClass": "CheckRadio",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "TextDemo",
+            "request": "launch",
+            "mainClass": "TextDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "SwingBasics",
+            "request": "launch",
+            "mainClass": "SwingBasics",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "JFrameDemo",
+            "request": "launch",
+            "mainClass": "JFrameDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "OptionPaneDemo",
+            "request": "launch",
+            "mainClass": "OptionPaneDemo",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "JdbcCreate",
+            "request": "launch",
+            "mainClass": "JdbcCreate",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "JdbcCreate",
+            "request": "launch",
+            "mainClass": "JDBC.JdbcCreate",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
+            "name": "DrawPolygonSwing",
+            "request": "launch",
+            "mainClass": "AWT.DrawPolygonSwing",
+            "projectName": "Programming-Languages_6e59702f"
+        },
+        {
+            "type": "java",
             "name": "StringClass",
             "request": "launch",
             "mainClass": "StringClass",

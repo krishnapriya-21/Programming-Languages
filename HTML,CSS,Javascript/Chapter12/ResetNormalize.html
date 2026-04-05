@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern CSS Reset Demo</title>
+  <style>
+    /* Modern CSS reset (Josh Comeau's approach) */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    * {
+      margin: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+    }
+    img, picture, video, canvas, svg {
+      display: block;
+      max-width: 100%;
+    }
+    input, button, textarea, select {
+      font: inherit;  /* inputs don't inherit font by default! */
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+
+    /* Demo styles */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      background: #264DE4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #1a3bc4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Modern CSS Reset Demo</h1>
+  <p>This page uses a modern CSS reset to ensure consistent styling across browsers.</p>
+  <img src="https://picsum.photos/400/200" alt="Sample image">
+  <p>Notice how images, headings, and text are styled consistently without browser quirks.</p>
+  <button class="btn">Click Me</button>
+</body>
+</html>

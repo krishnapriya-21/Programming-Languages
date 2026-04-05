@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BEM Card Demo</title>
+  <style>
+    /* Block — standalone component (.card) */
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      max-width: 320px;
+      margin: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+      background: #fff;
+    }
+
+    /* Modifier — variant of block (.card--featured) */
+    .card--featured {
+      border: 2px solid #264DE4;
+    }
+
+    /* Elements — parts of the block */
+    .card__image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .card__body {
+      padding: 20px;
+    }
+
+    .card__title {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    /* Modifier — variant of element (.card__title--large) */
+    .card__title--large {
+      font-size: 1.6rem;
+    }
+
+    .card__description {
+      color: #6B7280;
+    }
+
+    .card__link {
+      display: inline-block;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #264DE4;
+    }
+
+    /* Button styles for demo */
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .btn--primary {
+      background: #264DE4;
+      color: white;
+      border: none;
+    }
+    .btn--primary:hover {
+      background: #1a3bc4;
+    }
+  </style>
+</head>
+<body>
+  <h1>BEM Card Component Example</h1>
+
+  <!-- Featured card -->
+  <article class="card card--featured">
+    <img class="card__image" src="https://picsum.photos/600/338" alt="Sample Image">
+    <div class="card__body">
+      <h2 class="card__title card__title--large">Featured Title</h2>
+      <p class="card__description">This is a featured card with a larger title and highlighted border.</p>
+      <a class="card__link btn btn--primary" href="#">Read More</a>
+    </div>
+  </article>
+
+  <!-- Regular card -->
+  <article class="card">
+    <img class="card__image" src="https://picsum.photos/600/338?grayscale" alt="Sample Image">
+    <div class="card__body">
+      <h2 class="card__title">Regular Title</h2>
+      <p class="card__description">This is a standard card with default styling.</p>
+      <a class="card__link btn btn--primary" href="#">Read More</a>
+    </div>
+  </article>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-Elements Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+    }
+
+    /* Quotation marks */
+    .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #333;
+    }
+    .quote::before { content: "\201C"; } /* open quote */
+    .quote::after  { content: "\201D"; } /* close quote */
+
+    /* Label badge */
+    .new-badge {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      background: #3182ce;
+      color: white;
+      border-radius: 6px;
+      margin: 20px;
+    }
+    .new-badge::after {
+      content: 'NEW';
+      position: absolute;
+      top: -8px; right: -8px;
+      background: #E44D26;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 9999px;
+    }
+
+    /* Clearfix (fix float collapse) */
+    .clearfix::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    .float-box {
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background: #38a169;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Decorative line using ::after */
+    .section-title {
+      position: relative;
+      padding-bottom: 12px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 60px; height: 4px;
+      background: #264DE4;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pseudo-Elements Examples</h1>
+
+  <p class="quote">This is a styled quote using ::before and ::after.</p>
+
+  <div class="new-badge">Product</div>
+
+  <div class="clearfix">
+    <div class="float-box">Box 1</div>
+    <div class="float-box">Box 2</div>
+  </div>
+
+  <h2 class="section-title">Section Heading</h2>
+  <p>Notice the decorative line under the heading created with ::after.</p>
+</body>
+</html>

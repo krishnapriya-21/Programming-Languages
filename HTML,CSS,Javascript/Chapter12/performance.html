@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Performance Features Demo</title>
+  <style>
+    /* Cascade layers for better organization 
+    
+    - Reset layer: global resets (like removing margins).
+    - Base layer: default typography and body styles.
+    - Components layer: reusable UI components (cards, buttons).
+    - Utilities layer: small helper classes (margin, text alignment).
+*/
+
+    @layer reset, base, components, utilities;
+
+    /* Reset layer */
+    @layer reset {
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+    }
+
+    /* Base layer */
+    @layer base {
+      body { font-family: system-ui; background: #f9f9f9; padding: 40px; }
+    }
+
+    /* Components layer */
+    @layer components {
+      .btn { padding: 10px 20px; border-radius: 6px; background: #264DE4; color: white; border: none; cursor: pointer; }
+      .btn:hover { background: #1a3bc4; }
+      .card {
+        width: 200px; height: 120px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        display: flex; align-items: center; justify-content: center;
+        margin: 20px;
+      }
+      .animated-card {
+        will-change: transform; /* browser creates composite layer */
+        transition: transform 0.3s ease;
+      }
+      .animated-card:hover {
+        transform: scale(1.05) rotate(2deg);
+      }
+      .widget {
+        contain: layout; /* isolate component for render performance */
+        background: #E44D26;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+    }
+
+    /* Utilities layer */
+    @layer utilities {
+      .mt-4 { margin-top: 16px; }
+      .text-center { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-center">CSS Performance Features Demo</h1>
+
+  <!-- Animated card -->
+  <div class="card animated-card">Hover Me</div>
+
+  <!-- Widget with contain -->
+  <div class="widget">
+    This widget is isolated with <code>contain: layout</code>.
+  </div>
+
+  <!-- Button -->
+  <button class="btn mt-4">Click Me</button>
+</body>
+</html>

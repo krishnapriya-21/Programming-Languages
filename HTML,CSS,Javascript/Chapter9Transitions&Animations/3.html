@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide In Up Animation Demo</title>
+  <style>
+    /* Define the animation sequence */
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Apply the animation to hero title */
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #264DE4;
+      text-align: center;
+      margin-top: 60px;
+      animation: slideInUp 0.6s ease-out forwards;
+      /* name | duration | timing | fill-mode */
+    }
+
+    /* Stagger children (each delayed) */
+    .item:nth-child(1) {
+      animation: slideInUp 0.5s 0.1s ease-out both;
+    }
+    .item:nth-child(2) {
+      animation: slideInUp 0.5s 0.2s ease-out both;
+    }
+    .item:nth-child(3) {
+      animation: slideInUp 0.5s 0.3s ease-out both;
+    }
+
+    /* Layout styling */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .item {
+      background: #fff;
+      margin: 12px 0;
+      padding: 16px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      opacity: 0; /* start hidden until animation runs */
+    }
+  </style>
+</head>
+<body>
+  <h1 class="hero-title">Welcome to My Page</h1>
+  <div class="container">
+    <div class="item">First Item</div>
+    <div class="item">Second Item</div>
+    <div class="item">Third Item</div>
+  </div>
+</body>
+</html>

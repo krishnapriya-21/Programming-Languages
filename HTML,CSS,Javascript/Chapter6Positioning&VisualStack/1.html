@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relative & Absolute Positioning Demo</title>
+  <style>
+    /* Stays in flow, offset from its normal position */
+    .nudged {
+      position: relative;
+      top: 5px;   /* moves DOWN 5px */
+      left: 10px; /* moves RIGHT 10px */
+      background: #264DE4;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* Most important use: makes it a positioning CONTEXT for absolute children */
+    .card {
+      position: relative; /* anchor for the badge below */
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 40px auto;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #e53935;
+      color: #fff;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 12px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Positioning Demo</h1>
+
+  <!-- Nudged element -->
+  <div class="nudged">I am nudged down & right</div>
+
+  <!-- Card with badge -->
+  <div class="card">
+    <div class="badge">New</div>
+    <h2>Card Title</h2>
+    <p>This card has a badge positioned relative to it.</p>
+  </div>
+</body>
+</html>

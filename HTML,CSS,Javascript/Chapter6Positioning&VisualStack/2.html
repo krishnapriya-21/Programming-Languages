@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute Positioning Demo</title>
+  <style>
+    /* Common pattern: notification badge on button */
+    .btn-wrapper {
+      position: relative;  /* <- important! */
+      display: inline-block;
+      margin: 40px;
+    }
+    .btn {
+      padding: 12px 24px;
+      background: #264DE4;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .notification-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Centering absolutely positioned element */
+    .overlay-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: #f4f4f4;
+      margin: 40px auto;
+      border: 2px dashed #ccc;
+    }
+    .centered-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* shift back by half its size */
+      background: rgba(38,77,228,0.9);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #fafafa;
+    }
+    h1 {
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Absolute Positioning Examples</h1>
+
+  <!-- Button with notification badge -->
+  <div class="btn-wrapper">
+    <button class="btn">Messages</button>
+    <div class="notification-badge">3</div>
+  </div>
+
+  <!-- Container with centered overlay -->
+  <div class="overlay-container">
+    <div class="centered-overlay">Centered Overlay</div>
+  </div>
+</body>
+</html>

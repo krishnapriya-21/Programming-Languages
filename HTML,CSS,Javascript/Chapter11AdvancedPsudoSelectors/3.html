@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-Elements Text Styling Demo</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #f9f9f9;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    /* Style first letter (drop cap) */
+    p::first-letter {
+      font-size: 3rem;
+      font-weight: 900;
+      float: left;
+      line-height: 1;
+      margin-right: 6px;
+      color: #264DE4;
+    }
+
+    /* Style first line only */
+    p::first-line {
+      font-variant: small-caps;
+      letter-spacing: 0.05em;
+    }
+
+    /* Style text selection */
+    ::selection {
+      background: #264DE4;
+      color: white;
+    }
+
+    /* Style input placeholder */
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 20px;
+      width: 250px;
+    }
+    input::placeholder {
+      color: #9CA3AF;
+      font-style: italic;
+    }
+    input:focus::placeholder {
+      opacity: 0; /* hide on focus */
+    }
+  </style>
+</head>
+<body>
+  <h1>Pseudo-Elements for Text Styling</h1>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
+    Donec ullamcorper nulla non metus auctor fringilla.
+  </p>
+
+  <p>
+    Another paragraph to demonstrate the drop cap and first-line styling. 
+    Notice how the first letter is enlarged and styled differently.
+  </p>
+
+  <input type="text" placeholder="Enter your name here">
+</body>
+</html>

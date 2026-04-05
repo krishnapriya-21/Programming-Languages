@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Positioning Demo</title>
+  <style>
+    /* Sticky header */
+    .sticky-header {
+      position: sticky;
+      top: 0;           /* sticks at 0px from top */
+      background: white;
+      z-index: 10;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: bold;
+      border-bottom: 2px solid #ccc;
+    }
+
+    /* Sticky table header */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    thead tr th {
+      position: sticky;
+      top: 0;
+      background: #1a1a2e;
+      color: white;
+      z-index: 1;
+      padding: 8px;
+    }
+    tbody tr td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Sidebar that sticks when scrolling long content */
+    .layout {
+      display: flex;
+      gap: 20px;
+    }
+    .content {
+      flex: 3;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .sticky-sidebar {
+      flex: 1;
+      position: sticky;
+      top: 80px; /* 80px from top (leave room for navbar/header) */
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 16px;
+      border-radius: 6px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky header -->
+  <div class="sticky-header">Sticky Header</div>
+
+  <!-- Layout with sidebar -->
+  <div class="layout">
+    <div class="content">
+      <h2>Scrollable Content</h2>
+      <p>Scroll down to see the sticky header and sidebar in action.</p>
+
+      <!-- Long text to enable scrolling -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet facilisis urna. Praesent ultrices nulla at erat pellentesque, nec fermentum lorem volutpat. Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo.</p>
+      <p>Aliquam erat volutpat. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.</p>
+      <p style="margin-bottom: 600px;">Extra space added here so you can scroll and test sticky behavior.</p>
+
+      <!-- Sticky table header -->
+      <h2>Sticky Table Header</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Apples</td><td>10</td><td>$5</td></tr>
+          <tr><td>Bananas</td><td>8</td><td>$4</td></tr>
+          <tr><td>Oranges</td><td>12</td><td>$6</td></tr>
+          <tr><td>Mangoes</td><td>5</td><td>$10</td></tr>
+          <tr><td>Pineapples</td><td>3</td><td>$9</td></tr>
+          <tr><td>Grapes</td><td>15</td><td>$7</td></tr>
+          <tr><td>Strawberries</td><td>20</td><td>$12</td></tr>
+          <tr><td>Blueberries</td><td>25</td><td>$15</td></tr>
+          <tr><td>Watermelons</td><td>2</td><td>$8</td></tr>
+          <tr><td>Peaches</td><td>7</td><td>$11</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Sticky sidebar -->
+    <div class="sticky-sidebar">
+      <h3>Sidebar</h3>
+      <p>This sidebar stays visible as you scroll.</p>
+      <ul>
+        <li>Navigation Link 1</li>
+        <li>Navigation Link 2</li>
+        <li>Navigation Link 3</li>
+        <li>Navigation Link 4</li>
+        <li>Navigation Link 5</li>
+        <li>Navigation Link 6</li>
+        <li>Navigation Link 7</li>
+        <li>Navigation Link 8</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

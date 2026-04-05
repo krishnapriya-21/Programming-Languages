@@ -1,0 +1,32 @@
+What is JDBC?
+- JDBC (Java Database Connectivity) is an API in Java that allows programs to connect and interact with databases.
+- It provides methods to send SQL queries and process results.
+- Acts as a bridge between Java applications and relational databases (like MySQL, Oracle, PostgreSQL).
+
+What is An API?
+API (Application Programming Interface) is a set of rules and tools that allows different software applications to communicate with each other. It acts like a “middleman” that takes a request from one program, sends it to another, and returns the response.
+- Definition: A software interface that enables one program to use the services or data of another program.
+
+
+Key Steps in JDBC:
+- Load the database driver (Class.forName).
+- Establish a connection (DriverManager.getConnection).
+- Create a statement (Statement or PreparedStatement).
+- Execute SQL queries (INSERT, SELECT, UPDATE, DELETE).
+- Process results (ResultSet).
+- Close the connection.
+
+What is CRUD?
+- CRUD stands for Create, Read, Update, Delete.
+- These are the four basic operations used in databases and applications.
+
+| Operation | SQL Command  | Example | 
+|-----------|--------------|---------| 
+| Create    | INSERT       | Add a new student record | 
+| Read      | SELECT       | Retrieve student details | 
+| Update    | UPDATE       | Modify student name | 
+| Delete    | DELETE       | Remove student record | 
+
+
+
+

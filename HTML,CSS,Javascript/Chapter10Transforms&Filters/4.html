@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Filter Effects Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      background: #ddd;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    img.demo {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Blur */
+    .blur-sm { filter: blur(4px); }
+    .blur-bg { filter: blur(12px); }  /* frosted glass background */
+
+    /* Brightness and contrast */
+    .dim     { filter: brightness(0.7); }
+    .bright  { filter: brightness(1.3); }
+    .high-c  { filter: contrast(1.5); }
+
+    /* Grayscale */
+    .bw          { filter: grayscale(100%); }
+    .bw:hover    { filter: grayscale(0); transition: filter 0.3s; }
+
+    /* Hue rotate — change color without changing image */
+    .hue-shift   { filter: hue-rotate(90deg); }
+
+    /* Sepia / vintage */
+    .vintage     { filter: sepia(50%) contrast(1.1) brightness(1.05); }
+
+    /* Multiple filters */
+    .instagram   { filter: contrast(1.2) brightness(1.1) saturate(1.3); }
+
+    /* Invert */
+    .inverted    { filter: invert(100%); }
+
+    /* Drop shadow on transparent images (unlike box-shadow) */
+    .png-shadow  { filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.4)); }
+  </style>
+</head>
+<body>
+  <div class="box blur-sm">Blur SM</div>
+  <div class="box blur-bg">Blur BG</div>
+
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo dim">
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo bright">
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo high-c">
+
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo bw">
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo hue-shift">
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo vintage">
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo instagram">
+  <img src="https://picsum.photos/200/150" alt="Demo" class="demo inverted">
+
+  <!-- Example with transparent PNG -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" 
+       alt="Transparent PNG" class="demo png-shadow">
+</body>
+</html>

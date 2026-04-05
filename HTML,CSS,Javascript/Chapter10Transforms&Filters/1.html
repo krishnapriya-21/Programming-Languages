@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Transform Demo</title>
+  <style>
+    /* Base styling for demo boxes */
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      background: lightblue;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      border: 2px solid #333;
+    }
+
+    /* translate — move element */
+    .move-right  { transform: translateX(50px); }
+    .move-down   { transform: translateY(20px); }
+    .move-both   { transform: translate(50px, 20px); }
+    .center-abs  { 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      background: lightcoral;
+    }
+
+    /* scale — resize element */
+    .bigger  { transform: scale(1.5); }   /* 150% */
+    .smaller { transform: scale(0.8); }   /* 80% */
+    .wide    { transform: scaleX(2); }    /* double width */
+    .flip    { transform: scaleX(-1); }   /* horizontal flip */
+
+    /* rotate — spin element */
+    .slight  { transform: rotate(5deg); }
+    .quarter { transform: rotate(90deg); }
+    .flip-v  { transform: rotate(180deg); }
+
+    /* skew — slant element */
+    .slanted { transform: skewX(-15deg); }
+
+    /* Combining transforms */
+    .combined { transform: rotate(45deg) scale(1.2) translateX(10px); }
+
+    /* transform-origin — change pivot point */
+    .tooltip { 
+      transform-origin: bottom center; 
+      transform: scale(1.2);
+      background: lightgreen;
+    }
+    .badge   { 
+      transform-origin: top right; 
+      transform: rotate(30deg);
+      background: lightyellow;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transform Examples</h1>
+
+  <div class="box move-right">Right</div>
+  <div class="box move-down">Down</div>
+  <div class="box move-both">Both</div>
+
+  <div class="box bigger">Big</div>
+  <div class="box smaller">Small</div>
+  <div class="box wide">Wide</div>
+  <div class="box flip">Flip</div>
+
+  <div class="box slight">Rotate 5°</div>
+  <div class="box quarter">Rotate 90°</div>
+  <div class="box flip-v">Rotate 180°</div>
+
+  <div class="box slanted">Skew</div>
+  <div class="box combined">Combined</div>
+
+  <div class="box tooltip">Tooltip</div>
+  <div class="box badge">Badge</div>
+
+  <!-- Centered box -->
+  <div class="box center-abs">Center</div>
+</body>
+</html>
